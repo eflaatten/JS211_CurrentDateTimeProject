@@ -5,7 +5,7 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
+console.log(new Date().toLocaleString())
 
 const displayDate = () => {
   const currentDate = new Date()
@@ -18,21 +18,21 @@ const displayDate = () => {
 
 const num = 5
 
-const convertNum = () => {
-  return num.toString
+const convertNum = (x) => {
+  return x.toString()
 }
 
+console.log(convertNum(num))
 
 // Write a JavaScript program to convert a string to the number.
 
-const string = "Hello"
+const string = "15"
 
-const convertString = () => {
-  return string
+const convertString = (y) => {
+  return parseInt(y)
 }
 
-// console.log(num)
-// console.log(string)
+console.log(convertString(string))
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -41,16 +41,20 @@ const convertString = () => {
   // * Number
   // * NaN
   // * String
-  
-const checkDataType = () => {
-  
+
+const checkDataType = (data) => {
+  // return typeof type
+  return typeof data
 }
 
-  
-// Write a JavaScript program that adds 2 numbers together.
+console.log(checkDataType(true))
+console.log(checkDataType(null))
+console.log(checkDataType(NaN))
+console.log(checkDataType())
+console.log(checkDataType(8))
+console.log(checkDataType("Hello"))
 
-const num1 = 5
-const num2 = 10
+// Write a JavaScript program that adds 2 numbers together.
 
 const addNums = () => {
   let x = document.getElementById('numOne').value
@@ -64,9 +68,32 @@ const addNums = () => {
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+
+const bothAreTrue = (x, y) => {
+  if(x && y){
+    return true
+  }
+}
+
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const oneAreTrue = (x, y) => {
+  if(x || y){
+    return true
+  }
+}
+
 // Write a JavaScript program that runs when both things are not true.  
+
+const noneAreTrue = (x, y) => {
+  if(!x && !y){
+    return true
+  }
+}
+
+console.log(bothAreTrue(5, 5))
+console.log(oneAreTrue(15, 0))
+console.log(noneAreTrue(0, 0))
 
 // ***************************
 //         PART TWO
